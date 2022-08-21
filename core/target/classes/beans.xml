@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+    <!--    We can define global init-method declaration as default-init-method in <beans> tag above-->
+
+<!--    <bean id="numberGenerator" class="academy.learnProgramming.NumberGeneratorImpl"/>-->
+
+    <!--    we can define local init-method in bean itself: <bean id.. ref.. init-method="reset">
+    but annotation is more preferred option-->
+<!--    <bean id="game" class="academy.learnProgramming.GameImpl">-->
+    <!--        <constructor-arg ref="numberGenerator"/>-->
+<!--    </bean>-->
+    <!-- This tag activates the spring infrastructure for various annotations
+    to be detected in bean classes like autowired as well as preConstruct and others-->
+<!--    <context:annotation-config></context:annotation-config>-->
+<!--    We are going to add another tag-->
+    <context:component-scan base-package="academy.learnProgramming"/>
+</beans>
